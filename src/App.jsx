@@ -25,6 +25,7 @@ const ProtectedRoute = ({ children }) => {
   const hasCompletedOnboarding = useStore(state => state.hasCompletedOnboarding);
   if (!hasCompletedOnboarding) {
     return <Navigate to="/onboarding" replace />;
+
   }
   return children;
 };
